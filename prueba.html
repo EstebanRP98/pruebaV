@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffccd5;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    color: #d63384;
+}
+
+p {
+    color: #555;
+}
+
+button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #c9184a;
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    width: 50px;
+    height: 50px;
+    background-color: #ff4d6d;
+    transform: rotate(-45deg);
+    position: absolute;
+    z-index: 1;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff4d6d;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart::after {
+    left: 25px;
+    top: 0;
+}
